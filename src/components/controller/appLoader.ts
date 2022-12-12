@@ -2,7 +2,7 @@ import Loader from './loader';
 
 class AppLoader extends Loader {
     constructor() {
-        super('https://newsapi.org/v2/', {
+        super('https://newsapi-redirect-production.up.railway.app/', {
             // https://newsapi.org/v2/
             // https://nodenews.up.railway.app/
             // https://newsapi-redirect-production.up.railway.app/
