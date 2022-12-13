@@ -17,7 +17,8 @@ footer {
     height: 100px;
     display: flex;
     align-items: center;
-    justify-content: center;
+    justify-content: space-around;    
+    flex-direction: row;
 }
 footer .copyright {
     font-size: 14px;
@@ -32,4 +33,46 @@ footer .copyright a:hover {
 }
 footer .copyright:before {
     content: '©';
+}
+
+.footer__link_school {
+    width: 109px;
+    height: 41px;    
+}
+
+.footer__link:hover {
+    background-color: #faea68; 
+    box-shadow: 0 0 15px 4px yellow;   
+}
+
+.footer__link_github {    
+    height: 24px;
+    border-radius: 50%;    
+}
+
+.footer__link_github {    
+    height: 24px;
+    border-radius: 50%;    
+}
+
+
+.footer__year {    
+    color: #444444;
+    cursor: default;
+}
+.footer__year span {
+    color: #333333;    
+}
+.footer__year:hover {    
+    color: #666666;    
+}
+
+@media (max-width: 640px) {
+    footer {        
+        flex-direction: column;
+        height: 200px;
+    }
+    .footer__year {
+        font-size: 15px;
+    }
 }
