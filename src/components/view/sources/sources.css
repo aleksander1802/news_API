@@ -1,31 +1,44 @@
 .sources {
-    display: flex;
-    flex-wrap: nowrap;
+    display: grid;
+    grid-template-columns: repeat(32, 1fr);
+    grid-template-rows: repeat(4, 1fr);
     width: 100%;
-    height: 120px;
+    height: 400px;
     overflow: auto;
     align-items: center;
+    column-gap: 5px;
     font: 300 1em 'Fira Sans', sans-serif;
+}
+
+.sources::-webkit-scrollbar {
+    width: 7px;
+    background-color: #f9f9fd;
+}
+
+.sources::-webkit-scrollbar-thumb {
+    background-color: #223c50;
 }
 
 .source__item {
     background: none;
-    border: 2px solid #30c5ff;
+    border: 2px solid #223c50;
     font: inherit;
     line-height: 1;
     margin: 0.5em;
-    padding: 1em 2em;
-    color: #70d6ff;
+    padding: 1em 1em;
+    color: #02d0ff;
     transition: 0.25s;
     cursor: pointer;
+    text-align: center;
+    border-radius: 5px;
 }
 
 .source__item:hover,
 .source__item:focus {
-    border-color: #3fcc59;
-    color: #69db7e;
-    box-shadow: 0 0.5em 0.5em -0.4em #3fcc59;
-    transform: translateY(-0.25em);
+    border-color: #000000;
+    color: #ffffff;    
+    box-shadow: 0 0.2em 0.5em 0.5em #02d0ff;    
+    transform: scale(1.1);
 }
 
 .source__item-name {
