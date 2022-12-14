@@ -1,0 +1,103 @@
+body {
+    color: #fff;
+    background: #17181c;
+    font-family: sans-serif;
+}
+
+header {
+    padding: 10px 30px;
+}
+
+header h1 {
+    font-size: 40px;
+    font-weight: 800;
+}
+
+.button {
+    width: 100%;
+    margin: 20px auto;  
+    text-align: center;
+}
+
+.button__add {
+    text-align: center;    
+    width: auto;
+    background-color:  #162734;
+    margin: 0.5em;
+    padding: 1em 1em; 
+    line-height: 1;   
+    font: inherit;      
+    color: #02829e;
+    cursor: pointer;   
+    border: 2px solid #00748e;
+}
+
+.button__add:hover {    
+    background-color:  #2d526e;      
+    color: #00d0ff;    
+    border: 2px solid #00d0ff;
+}
+
+footer {
+    height: 100px;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;    
+    flex-direction: row;
+}
+footer .copyright {
+    font-size: 14px;
+    color: #333;
+    text-align: center;
+}
+footer .copyright a {
+    color: #444;
+}
+footer .copyright a:hover {
+    color: #555;
+}
+footer .copyright:before {
+    content: '©';
+}
+
+.footer__link_school {
+    width: 109px;
+    height: 41px;    
+}
+
+.footer__link:hover {
+    background-color: #faea68; 
+    box-shadow: 0 0 15px 4px yellow;   
+}
+
+.footer__link_github {    
+    height: 24px;
+    border-radius: 50%;    
+}
+
+.footer__link_github {    
+    height: 24px;
+    border-radius: 50%;    
+}
+
+
+.footer__year {    
+    color: #444444;
+    cursor: default;
+}
+.footer__year span {
+    color: #333333;    
+}
+.footer__year:hover {    
+    color: #666666;    
+}
+
+@media (max-width: 640px) {
+    footer {        
+        flex-direction: column;
+        height: 200px;
+    }
+    .footer__year {
+        font-size: 15px;
+    }
+}
