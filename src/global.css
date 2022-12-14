@@ -13,6 +13,31 @@ header h1 {
     font-weight: 800;
 }
 
+.button {
+    width: 100%;
+    margin: 20px auto;  
+    text-align: center;
+}
+
+.button__add {
+    text-align: center;    
+    width: auto;
+    background-color:  #162734;
+    margin: 0.5em;
+    padding: 1em 1em; 
+    line-height: 1;   
+    font: inherit;      
+    color: #02829e;
+    cursor: pointer;   
+    border: 2px solid #00748e;
+}
+
+.button__add:hover {    
+    background-color:  #2d526e;      
+    color: #00d0ff;    
+    border: 2px solid #00d0ff;
+}
+
 footer {
     height: 100px;
     display: flex;

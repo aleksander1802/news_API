@@ -3,7 +3,16 @@ import { interfaceSources } from '../../controller/loader';
 import { typeSafe } from '../news/news';
 
 class Sources {
+    count = 0;
+    paginationArray: interfaceSources[] = [];
+
     draw(data: interfaceSources[]) {
+        const main = document.querySelector('.sources');
+
+        if (!(main instanceof HTMLElement)) {
+            throw new Error('Шаблон-элемент не найден!');
+        }
+
         const fragment = document.createDocumentFragment();
         const sourceItemTemp = document.querySelector('#sourceItemTemp');
 

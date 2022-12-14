@@ -45,7 +45,6 @@
     white-space: nowrap;
 }
 
-
 @media (max-width: 1500px) {
     .sources {
         grid-template-columns: repeat(5, 1fr);;
