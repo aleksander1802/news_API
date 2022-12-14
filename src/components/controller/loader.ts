@@ -65,7 +65,7 @@ type OptionsKey = {
 };
 
 class Loader {
-    constructor(protected baseLink: string, protected options: OptionsKey) {}
+    constructor(private baseLink: string, private options: OptionsKey) {}
 
     getResp<T>(
         { endpoint, options = {} }: EndpointWithOptions,
@@ -79,9 +79,9 @@ class Loader {
     private errorHandler(res: Response): Response {
         if (!res.ok) {
             if (
-                res.status === ErrorForMe.Upgrade_Required ||
-                res.status === ErrorForMe.The_most_Lovely_Error ||
-                res.status === ErrorForMe.Unauthorized_Response
+                res.status == ErrorForMe.Upgrade_Required ||
+                res.status == ErrorForMe.The_most_Lovely_Error ||
+                res.status == ErrorForMe.Unauthorized_Response
             )
                 console.log(`Sorry, but there is ${res.status} error: ${res.statusText}`);
             throw Error(res.statusText);
