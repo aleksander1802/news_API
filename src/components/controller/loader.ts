@@ -65,13 +65,7 @@ type OptionsKey = {
 };
 
 class Loader {
-    baseLink: string;
-    options: OptionsKey;
-
-    constructor(baseLink: string, options: OptionsKey) {
-        this.baseLink = baseLink;
-        this.options = options;
-    }
+    constructor(protected baseLink: string, protected options: OptionsKey) {}
 
     getResp<T>(
         { endpoint, options = {} }: EndpointWithOptions,

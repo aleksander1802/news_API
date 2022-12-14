@@ -4,15 +4,11 @@ import { NewsEverythingContent, Source } from '../controller/loader';
 import { interfaceSources } from '../controller/loader';
 
 export class AppView {
-    news: News;
-    sources: Sources;
-    paginationArray: interfaceSources[] = [];
-
-    constructor() {
-        this.news = new News();
-        this.sources = new Sources();
-        this.paginationArray;
-    }
+    constructor(
+        protected news: News = new News(),
+        protected sources: Sources = new Sources(),
+        public paginationArray: interfaceSources[] = []
+    ) {}
 
     drawNews(data: NewsEverythingContent) {
         const values = data?.articles ? data?.articles : [];

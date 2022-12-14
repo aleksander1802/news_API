@@ -3,13 +3,7 @@ import { AppView } from '../view/appView';
 import { typeSafe } from '../view/news/news';
 
 class App {
-    controller: AppController;
-    view: AppView;
-
-    constructor() {
-        this.controller = new AppController();
-        this.view = new AppView();
-    }
+    constructor(public controller: AppController = new AppController(), public view: AppView = new AppView()) {}
 
     start() {
         typeSafe(document, '.sources').addEventListener('click', (e) =>
